@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogly {% endblock %}
+
+{% block content %}
+<img src="{{ person.img_url }}" width="100" height="100">
+<h1>{{ person.first_name }} {{ person.last_name }}</h1>
+<a href="/user_listing">Go back</a>
+{% endblock %}

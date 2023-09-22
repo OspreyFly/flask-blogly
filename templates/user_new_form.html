@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogly {% endblock %}
+
+{% block content %}
+<h1>Who Are You?</h1>
+<form>
+    <label>First Name:</label>
+    <input type="text" name="first_name">
+    <label>Last Name:</label>
+    <input type="text" name="last_name">
+    <label>Profile Picture</label>
+    <input type="url" name="img_url" placeholder="i.e.http://website.com/profile_picture.jpg">
+</form>
+{% endblock %}
