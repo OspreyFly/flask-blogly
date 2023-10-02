@@ -1,0 +1,72 @@
+html{
+    background-color:lightsalmon;
+}
+
+/* CSS to style the user info container */
+#user_info {
+    display: flex;
+    align-items: center;
+}
+
+/* CSS to style the user image */
+.user-image {
+    width: 100px; /* Set a fixed width for the square image */
+    height: 100px; /* Set a fixed height for the square image */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    object-position: center center; /* Center the image within the container */
+    border-radius: 50%; /* Make the image circular (optional) */
+    margin-right:10px;
+}
+/* CSS to style the user info div */
+.user-info {
+    display: inline-block;
+}
+
+/* CSS to style the Edit button */
+.edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px; /* Add spacing between buttons */
+}
+
+/* CSS to style the Delete button */
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
+
+#user_posts {
+    margin-top: 20px; /* Add spacing between user info and posts */
+} 
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    display: list-item;
+}
+
+.link-style {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+/* Change the link color on hover */
+.link-style:hover {
+    color: #007bff; /* Change to a different color when hovered over */
+}
+
+.delete-button {
+    
+}
+
+.add-btn{
+    margin-bottom: 10px;
+}

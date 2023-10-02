@@ -3,14 +3,29 @@
 {% block title %} Blogly {% endblock %}
 
 {% block content %}
-<img src="{{ user.img_url }}" width="100" height="100">
-<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+<div id="user_info">
+    <img src="{{ user.img_url }}" class="user-image">
+    <div id="user_name_title" class="user-info">
+        <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+        <a href="/users/{{user.id}}/edit">
+            <button class="edit-button">Edit</button>
+        </a>
+        <form action="/users/{{user.id}}/delete" method="post">
+            <input type="submit" value="Delete" class="delete-button">
+        </form>
+    </div>
+</div>
+<div id="user_posts">
+    <h2>Posts</h2>
+    <ul>
+        {% for post in posts %}
+        <li><a href="/posts/{{ post.id }}" class="link-style">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/users/{{user.id}}/posts/new">
+        <button class="add-btn">Add Post</button>
+    </a>
+</div>
 <a href="/users">Go back</a>
-<a href="/users/{{user.id}}/edit">
-    <button>Edit</button>
-</a>
-<form action="/users/{{user.id}}/delete" method="post">
-    <input type="submit" value="Delete">
-</form>
 
 {% endblock %}
