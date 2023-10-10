@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogly {% endblock %}
+
+{% block content %}
+<h1>{{ tag.name }}</h1>
+<a href="/tags/{{tag.id}}/edit">
+    <button class="edit-button">Edit</button>
+</a>
+<form action="/tags/{{tag.id}}/delete" method="post">
+    <input type="submit" value="Delete" class="delete-button">
+</form>
+<h2>Posts</h2>
+<ul>
+    {% for post in posts %}
+    <li><a href="/posts/{{ post.id }}" class="link-style">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+<a href="/tags/new">
+    <button class="add-btn">Add Tag</button>
+</a>
+<a href="/tags">Back</a>
+{% endblock %}

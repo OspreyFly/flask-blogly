@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogly {% endblock %}
+
+{% block content %}
+<h1>Edit a tag</h1>
+<form action="/tags/{{tag.id}}/edit" method="post">
+    <label>Name:</label>
+    <input type="text" value="{{tag.name}}" name="name">
+    <a href="/tags">
+        <button>Cancel</button>
+    </a>
+    <input type="submit" value="Edit">
+</form>
+{% endblock %}

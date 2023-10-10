@@ -3,7 +3,7 @@
 {% block title %} Blogly {% endblock %}
 
 {% block content %}
-<div id="user_info">
+<div id="user_info" class="horiz-align">
     <img src="{{ user.img_url }}" class="user-image">
     <div id="user_name_title" class="user-info">
         <h1>{{ user.first_name }} {{ user.last_name }}</h1>
@@ -22,10 +22,14 @@
         <li><a href="/posts/{{ post.id }}" class="link-style">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
-    <a href="/users/{{user.id}}/posts/new">
-        <button class="add-btn">Add Post</button>
-    </a>
-</div>
-<a href="/users">Go back</a>
+    <div>
+        <a href="/users/{{user.id}}/posts/new">
+            <button class="add-btn">Add Post</button>
+        </a>
 
-{% endblock %}
+        <a href="/users">
+            <button class="back-btn">Back</button>
+        </a>
+    </div>
+
+    {% endblock %}

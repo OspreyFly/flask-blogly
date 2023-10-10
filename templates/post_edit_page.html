@@ -9,6 +9,20 @@
     <input type="text" value="{{post.title}}" name="title">
     <label>Content:</label>
     <input type="text" value="{{post.content}}" name="content">
+    <fieldset>
+        <legend>Add tags to your post</legend>
+        {% for allTag in all_tags %}
+        <div>
+            {% if allTag in tags %}
+            <input type="checkbox" value="{{ allTag.name }}" name="tags[]" id="{{ allTag.name }}" checked>
+            {% else %}
+            <input type="checkbox" value="{{ allTag.name }}" name="tags[]" id="{{ allTag.name }}">
+            {% endif %}
+            <label for="{{ allTag.name }}">{{ allTag.name }}</label>
+        </div>
+        {% endfor %}
+    </fieldset>
+
     <a href="/users">
         <button>Cancel</button>
     </a>

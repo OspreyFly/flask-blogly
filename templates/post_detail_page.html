@@ -5,6 +5,13 @@
 {% block content %}
 <h1>{{ post.title }}</h1>
 <p class="post_body"> {{ post.content }}</p>
+<p>By {{ author.first_name}} {{ author.last_name }} on {{ post.created_at }} </p>
+<p>
+    <b>Tags:</b>
+    {% for tag in tags %}
+    <span class="tag">{{ tag.name }}</span>
+    {% endfor %}
+</p>
 <a href="/posts/{{ post.id }}/edit">
     <button class="edit-button">Edit</button>
 </a>

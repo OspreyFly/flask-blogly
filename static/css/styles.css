@@ -1,9 +1,35 @@
 html{
-    background-color:lightsalmon;
+    background-color:sandybrown;
 }
 
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    display: list-item;
+}
+
+h1 {
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
 /* CSS to style the user info container */
-#user_info {
+
+#user_name_title {
+    display: flex;
+    align-items: center;
+}
+
+#user_posts {
+    margin-top: 20px; /* Add spacing between user info and posts */
+}
+
+.horiz-align {
     display: flex;
     align-items: center;
 }
@@ -20,6 +46,15 @@ html{
 /* CSS to style the user info div */
 .user-info {
     display: inline-block;
+    vertical-align: middle;
+}
+
+.add-btn{
+    background-color: #3e3e3e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px; /
 }
 
 /* CSS to style the Edit button */
@@ -39,17 +74,11 @@ html{
     padding: 5px 10px;
 }
 
-#user_posts {
-    margin-top: 20px; /* Add spacing between user info and posts */
-} 
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px; /* Add spacing between list items */
-    display: list-item;
+.back-btn {
+    background-color: #3e3e3e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
 }
 
 .link-style {
@@ -63,10 +92,9 @@ li {
     color: #007bff; /* Change to a different color when hovered over */
 }
 
-.delete-button {
-    
-}
-
-.add-btn{
-    margin-bottom: 10px;
-}
+.tag {
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 2px;
+} 
